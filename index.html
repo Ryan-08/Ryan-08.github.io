@@ -1,114 +1,59 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>	My Resume </title>
-			
-		<meta charset="utf-8">
-		<link  rel="stylesheet" href="main.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<title>To Do List</title>
 	</head>
-	
-	<body style>
-		<div class="wrapper">
-			<div class="sidebar-wrapper">
-				<div class="profile-container">
-					<h1 class="name"> Mohamad Ade Ryan</h1>
-					<h3 class="tagline"> Mahasiswa </h3>					
+	<body>	
+		<header>
+			<nav>				
+				<h1>ToDoList</h1>
+				<ul>
+					<li><a data-page ="home" href="#home">Beranda</a></li>
+					<li><a data-page ="daftar-Kegiatan" href="#daftar-Kegiatan">Daftar Kegiatan</a></li>					
+					<li><a data-page ="resume" href="/myResume/index.html">About me</a></li>					
+					<div class="bubble"></div>
+				</ul>
+			</nav>
+		</header>		
+		<main>
+			<section data-index="0" id="home">
+				<h1>ToDoList</h1>
+				<div class="first-page">
+					<input type="text" name="ToDo" id="input" autocomplete="off" required onkeydown="makeList(this)">
+					<label for="ToDo" class="label-ToDo">
+						<span class="content-ToDo">Apa yang ingin anda lakukan?</span>
+					</label>										
 				</div>
-				<div class="identity-container container-block">
-					<h2 class="container-block-title">
-						Information
-					</h2>
-					<ul class="list-unstyled identity-list">						
-						<li class="email">							
-							E-mail:
-							<a href="mailto:ade.ryan@mhs.ac.id">
-							ade.ryan@mhs.ac.id</a>						
-						</li>						
-						<li class="phone">
-							WA: 085704719343
-						</li>
-						<li class="NIM">NIM:1808107010051
-						</li>
-						<li class="github">	
-							Github:
-							<a href="https://github.com/Ryan-08" target="_blank">
-							Ryan-08
-							</a>
-						</li>
-					</ul>					
-				</div>
-				<div class="education-container container-block">
-					<h2 class="container-block-title">
-					Educations
-					</h2>
-					<div class="item">
-						<h4 class="degree">High School</h4>
-						<h5 class="meta">St. Augustinus High School</h5>
-						<div class="time">2015-2018</div>
+			</section>
+			<section data-index="1" id="daftar-Kegiatan">
+				<h2>Daftar Kegiatan</h2>
+				<ul id="list-kegiatan" class="myList"></ul>	
+				<!-- modal pop up-->
+				<div id="myModal" class="modal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <p class="modal-title">Sunting Kegiatan Anda</p>								 
+						</div>
+						<div class="modal-body">
+							<input type="text" id="inputEdit" autocomplete="off" required>							
+						</div>
+						<div class="modal-footer">						
+						  <button type="button" id="saveBtn" class="btn btn-primary">Simpan</button>
+						</div>
+					  </div>
 					</div>
-					<div class="item">
-						<h4 class="degree">Studying in Informatics department</h4>
-						<h5 class="meta">Syiah Kuala University</h5>
-						<div class="time">2018-now</div>
-					</div>
-				</div>
-				<div class="language-container container-block">
-					<h2 class="container-block-title">
-					Language
-					</h2>
-					<ul class="list-unstyled interest-list">
-						<li>						
-						English												
-						</li>
-						<li>						
-						Indonesia												
-						</li>
-						<li>						
-						Jawa												
-						</li>
-					</ul>
-				</div>
-				<div class="interest-container container-block">
-					<h2 class="container-block-title">
-					Interest
-					</h2>
-					<ul class="list-unstyled interest-list">
-						<li>Sleeping</li>
-						<li>Reading</li>
-					</ul>
-				</div>
-			</div>
-			<div class="main-wrapper">
-				<section class="section">
-				<h1 style="font-size:40px"> About Me</h1>
-					<h2 class="section-title">				
-					Profile					
-					</h2>					
-						<p>
-							Nama saya Mohamad Ade Ryan, biasa di panggil Ade atau Ryan. <br>Saya berasal dari salah satu kota di jawa timur, tepatnya di Kediri. <br>
-							Saya sekarang kuliah di Universitas Syiah Kuala, Banda Aceh.<br> Saya sangat tertarik dengan bidang teknologi 
-						</p>							
-				</section>
-				<section class="section">
-					<h2 class="section-title">				
-					Educations					
-					</h2>
-						<p>		
-							Sebelumnya saya bersekolah di SMAK St. Augustinus Kediri.<br>							
-							Sekarang saya kuliah di Universitas Syiah Kuala, Banda Aceh.<br> 
-							Di jurusan Informatika, fakultas Matematika dan ilmu pengetahuan Alam.<br>
-							Sekarang saya sedang menjalani semester 4.
-						</p>
-				</section>				
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="text-center">
-				<small class="copyright">
-					Designed by Ryan &copy; 2020
-				</small>
-				</div>
-		</footer>
+				  </div>	
+			</section>			
+		</main>
+
+		<script src="app.js"></script>		
 	</body>
 </html>
