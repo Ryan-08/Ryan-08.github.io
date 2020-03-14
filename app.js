@@ -15,18 +15,13 @@ var myList = document.getElementsByClassName("listed");
 var listTodo = document.getElementById("list-kegiatan");
 
     btnSave.onclick = function() {
-        modal.style.display = "none";  
-        alert("its works");          
+        modal.style.display = "none";          
         var text = document.getElementById("inputEdit").value; 
         var tasker = newTask(text);                
-        for (let index = 0; index < arrayTask.length; index++) {
-            alert("lama "+oldTask); 
-            alert("awal "+arrayTask[index]);
-            alert("baru "+tasker);
+        for (let index = 0; index < arrayTask.length; index++) {           
             if(arrayTask[index]===oldTask){
                 Replace(oldTask, text);
-                listTodo.replaceChild(tasker, listTodo.childNodes[index]);                
-                alert("if works "+ index);
+                listTodo.replaceChild(tasker, listTodo.childNodes[index]);                               
             }            
         }              
     }
