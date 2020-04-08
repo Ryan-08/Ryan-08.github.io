@@ -6,7 +6,7 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/css/.css">
 
 		<title>To Do List</title>
 	</head>
@@ -15,9 +15,8 @@
 			<nav>				
 				<h1>ToDoList</h1>
 				<ul>
-					<li><a data-page ="home" href="#home">Beranda</a></li>
+					<li><a data-page ="home" href="https://ryan-08.github.io/">Beranda</a></li>
 					<li><a data-page ="daftar-Kegiatan" href="#daftar-Kegiatan">Daftar Kegiatan</a></li>					
-					<li><a data-page ="resume" href="/myResume/index.html">About me</a></li>					
 					<div class="bubble"></div>
 				</ul>
 			</nav>
@@ -34,7 +33,7 @@
 			</section>
 			<section data-index="1" id="daftar-Kegiatan">
 				<h2>Daftar Kegiatan</h2>
-				<div id="list-kegiatan" class="myList"></div>	
+				<ul id="list-kegiatan" class="myList"></ul>	
 				<!-- modal pop up-->
 				<div id="myModal" class="modal" tabindex="-1" role="dialog">
 					<div class="modal-dialog" role="document">
@@ -43,7 +42,7 @@
 						  <p class="modal-title">Sunting Kegiatan Anda</p>								 
 						</div>
 						<div class="modal-body" id="modal-body">
-							<!-- <input type="text" class="myInput" id="inputEdit" autocomplete="off" required>							 -->
+							<input type="text" class="myInput" id="inputEdit" autocomplete="off" required>							
 						</div>
 						<div class="modal-footer">						
 						  <button type="button" id="saveBtn" class="btn btn-primary">Simpan</button>
@@ -54,6 +53,6 @@
 			</section>			
 		</main>
 
-		<script src="app.js"></script>		
+		<script src="/js/.js"></script>		
 	</body>
 </html>
