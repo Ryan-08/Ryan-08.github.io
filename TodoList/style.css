@@ -96,7 +96,7 @@ section h2{
     padding: 0;   
 }
 
-#list-kegiatan li{    
+#list-kegiatan .listed{    
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -112,24 +112,24 @@ section h2{
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-#list-kegiatan li:nth-child(odd) {
+#list-kegiatan .listed:nth-child(odd) {
     background: #f9f9f9;
 }
   
   /* Darker background-color on hover */
-#list-kegiatan li:hover {
+#list-kegiatan .listed:hover {
     background: #ddd;
 }
   
   /* When clicked on, add a background color and strike out text */
-#list-kegiatan li.checked {
+#list-kegiatan .listed.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
   
 /* Add a "checked" mark when clicked on */
-#list-kegiatan li.checked::before {
+#list-kegiatan .listed.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
