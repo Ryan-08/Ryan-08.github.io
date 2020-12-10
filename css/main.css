@@ -1,0 +1,186 @@
+*{
+	box-sizing: border-box;	
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	color: white;
+	background-color: black;	
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	color: rgb(145, 142, 142);
+}
+
+.header{
+	padding: 60px;
+	text-align: center;
+	background: black;
+	color: white;
+}
+
+.header h1{
+	font-size: 60px;
+}
+
+.navbar{
+	overflow: hidden;
+	background-color: white;
+	/* position: sticky;
+	top: 0;	 */
+}
+
+.navbar a{
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn{
+	border: none;
+	outline: none;
+	color: black;
+	padding: 14px 20px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+
+.navbar a.right{
+	float: right;
+}
+
+.navbar a:hover, .dropbtn:hover{
+	background-color:black;
+	color: white;	
+}
+
+.dropdown-list {
+	display: none;
+	position: absolute;
+	background-color: #f9f9ff;	
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+	z-index: 1;
+  }
+  
+  .dropdown-list a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  .dropdown-list a:hover {
+	background-color: rgb(153, 153, 153);
+	color: black;
+  }
+  
+  .dropdown:hover .dropdown-list {
+	display: block;
+  }
+
+.content{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.side{
+	/* flex: 30%; */
+	width: 40%;
+	background-color: black;
+	padding: 20px;	
+	border-bottom: 5px solid white;
+	border-right: 5px solid white;
+}
+
+.main{
+	/* flex: 70%; */
+	width: 60%;
+	background-color:black;
+	padding: 20px;
+	border-bottom: 5px solid white;
+}
+
+.interest{
+	padding: 10px;
+}
+
+.profile, .education{
+	padding: 10px;	
+	border-bottom: 5px solid white;
+}
+
+.myList{	
+	padding-top: 20px;	
+}
+
+.myList li, .myList a{
+	text-decoration: none;
+	list-style: none;
+	color: white;
+}
+
+.myList a:hover{
+	color: rgb(145, 142, 142);
+}
+
+.profile img{
+	width: 20vw;
+}
+
+@media screen and (max-width: 700px){
+	/* .content{
+		flex-direction: column;
+	}	 */
+	.side, .main{
+		width: 100%;
+	}
+	.side{
+		border-right: none;		
+	}
+	.side h1, .myList, .item, .interest div{
+		text-align: center;
+	}
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	  }
+	.profile img{
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.navbar a{
+		float: none;
+		width: 100%;
+	}
+}
+
+.footer{
+	height: 60px;
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
