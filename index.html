@@ -1,115 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/main.css">
 
-	<title>NightCrawler</title>
-</head>
-<body>
-	<div class="header">
-		<h1>NightCrawler</h1>
-	</div>
-	<div class="navbar">
-		<a href="/index.html">Home</a>		
-		<div class="dropdown">
-			<button class="dropbtn">My Projects
-				<i class="fa fa-caret-down"></i>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@100;300;400;500;700&display=swap"
+			rel="stylesheet">
+
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<title>Ade Ryan's Profile</title>
+	</head>
+
+	<body class="bg-[--primary-color]">
+		<nav class="navigation shadow z-[10] bg-[--primary-color] sticky top-0 left-0 right-0 flex justify-between p-4">
+			<a href="#" class="logo w-[100px] flex items-center">
+				<img src="./assets/images/coderyan.svg" alt="Logo Code Ryan" class="object-contain">
+			</a>
+			<button id="btn-bar" class="sm:hidden">
+				<img src="./assets/images/bar.svg" alt="menu">
 			</button>
-			<div class="dropdown-list">
-				<a href="TodoList/index.html">ToDoList</a>				
-			</div>
-		</div>		
-	</div>
-	<div class="content">
-		<div class="side">			
-			<div class="profile">
-				<h1>About Me</h1>	
-				<div class="picture">
-					<img src="images/pppp.jpg" alt="profil" class="center">
-				</div>
-				<div class="myList">						
-					<span>
-						Nama: Mohamad Ade Ryan 
-						<br>
-					</span>
-					<span>							
-						E-mail:
-						<a href="mailto:ad21.ryn@gmail.com">
-						ad21.ryn@gmail.com</a>		
-						<br>				
-					</span>						
-					<span>
-						WA: 085704719343
-						<br>
-					</span>
-					<span>
-						NIM:1808107010051
-						<br>
-					</span>
-					<span>	
-						Github:
-						<a href="https://github.com/Ryan-08" target="_blank">
-						ryan-08.github.io
-						</a>
-						<br>
-					</span>
-				</div>	
-			</div>
-			<div class="education">
-				<h1>
-				Educations
-				</h1>
-				<div class="item">
-					<h4 class="degree">High School</h4>
-					<h5 class="meta">St. Augustinus High School</h5>
-					<div class="time">2015-2018</div>
-				</div>
-				<div class="item">
-					<h4 class="degree">Studying in Informatics department</h4>
-					<h5 class="meta">Syiah Kuala University</h5>
-					<div class="time">2018-now</div>
+			<ul class="gap-4 hidden sm:flex text-white">
+				<li class="links"><a href="#">Home</a></li>
+				<li class="links"><a href="#">Home</a></li>
+				<li class="links"><a href="#">Home</a></li>
+			</ul>
+		</nav>
+		<div id="dropmenu"
+			class="dropmenu z-[10] shadow hidden bg-[--primary-color] flex flex-col absolute top-0 right-0 left-0 mt-[50px]">
+			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
+				href="#">About</a>
+			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
+				href="#">Projects</a>
+			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
+				href="#">Contact</a>
+		</div>
+		<div class="hero flex flex-col-reverse h-[100vh] sm:flex-row p-4">
+			<div class="flex flex-col basis-full justify-center mb-16 sm:mb-0 sm:pl-8">
+				<h1 class="greet text-[#fff] text-[40px]">Hello World!</h1>
+				<h2 class="name text-[32px] text-[#fff]">My name is <span class="text-[--light-color]"> Ade
+						Ryan </span></h2>
+				<h3 class="info text-[28px] text-[--contrast-color] underline underline-offset-4">I am a Full-Stack Web
+					Developer</h3>
+				<div class="btn-wrapper mt-4 flex gap-4">
+					<button
+						class="btn bg-[--light-color] border-2 border-[--light-color] p-2 px-4 rounded-md font-medium ">LinkedIn</button>
+					<button
+						class="btn border-2 border-[--light-color] p-2 px-4 rounded-md font-medium text-[--light-color]">Contact
+						Me</button>
 				</div>
 			</div>
-			<div class="interest">
-				<h1>
-				Interest
-				</h1>
+			<div class="flex basis-full mb-12 sm:mb-0">
+				<img src="./assets/images/bg.jpg" alt="bg" class="bg">
+			</div>
+		</div>
+		<div id="projects" class="projects min-h-[100vh] p-4">
+			<h1 class="heading text-[32px] text-white font-bold mt-[40px] mb-4">Projects</h1>
+
+			<ul class="list-projects grid sm:grid-cols-4 gap-4">
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+				<!-- Project  -->
+				<li class="project flex flex-col gap-4 p-4">
+					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
+						data-link="#id">
+						<img class="rounded-md group-hover:opacity-25 duration-100 " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#github">Github</a>
+							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
+								href="#liveDemo">Live Demo</a>
+						</div>
+					</div>
+					<a href="#title" class="w-fit project_title text-white text-[24px]">[Project Title]</a>
+					<p class="text-white cursor-default">[Short Description of the project and what it does]</p>
+
+					<small class="text-white cursor-default">(Tech Stack Used)</small>
+				</li>
+			</ul>
+		</div>
+		<div class="contact h-[100vh] p-4">
+
+			<h1 id="ContactMe" class="text-3xl text-white font-bold mt-[40px] mb-4">
+				<span class="text-yellow-500">&#9742;</span>
+				&nbsp; Contact Me
+			</h1>
+			<br>
+			<form id="contactForm" action="#" method="post" class="space-y-4">
 				<div>
-					<span>Sleeping</span>
-					<br>
-					<span>Reading</span>
-					<br>
+					<label for="name" class="block text-[--light-color] font-semibold">Name:</label>
+					<input type="text" id="name" name="name" required
+						class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-[--contrast-color]">
 				</div>
-			</div>
+				<div>
+					<label for="email" class="block text-[--light-color] font-semibold">Email Address:</label>
+					<input type="email" id="email" name="email" required
+						class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-[--contrast-color]">
+				</div>
+				<div>
+					<label for="message" class="block text-[--light-color] font-semibold">Message:</label>
+					<textarea id="message" name="message" rows="5" cols="50"
+						placeholder="(Max length is 200 characters)" maxlength="200"
+						class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-[--contrast-color]"></textarea>
+				</div>
+				<button type="submit"
+					class="bg-yellow-600 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">Send
+					Message!</button>
+			</form>
+
 		</div>
-		<div class="main">
-			<div class="description">
-				<h2>Who Am I?</h2>
-				<p>
-					My name is Mohamad Ade Ryan, usually called Ade or Ryan.
-					I come from one of the cities in East Java, precisely in Kediri.
-					I am now studying at Syiah Kuala University, Banda Aceh
-					I'm very interested in the technology field
-					Previously I attended SMAK St. Augustine Kediri
-					Now I am studying at Syiah Kuala University, Banda Aceh
-					In the Informatics department, the faculty of Mathematics and Natural sciences.
-					Now I am undergoing semester 4.
-				</p>
-			</div>
-			<div class="project">
-				<h2>What Am I Doing Here?</h2>
-				<p>					
-					If you want to know, try to check on  <a href="#">my projects</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="footer">
-		<span>Copyright Ryan 2020</span>
-	</div>
-	
-</body>
+		<footer class="footer"></footer>
+
+		<script>
+			// Get a reference to the form element
+			const contactForm = document.getElementById('contactForm');
+
+			// Function to handle form submission
+			async function handleSubmit(event) {
+				event.preventDefault(); // Prevent the default form submission behavior
+
+				// Get the form input values
+				const name = contactForm.elements.name.value;
+				const email = contactForm.elements.email.value;
+				const message = contactForm.elements.message.value;
+
+				// Do something with the form data (e.g., send it to a server)
+				// Replace the code below with your desired action
+				const formData = { name, email, message };
+
+				try {
+					const response = await fetch("https://poetic-kelpie-6b6d72.netlify.app/send-email", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(formData),
+					});
+
+					const data = await response.json();
+
+					if (data.success) {
+						console.log("Email sent successfully!");
+					} else {
+						console.error("Error:", data.error);
+					}
+				} catch (error) {
+					console.error("Error:", error);
+				}
+
+				// For example, you can log the form data to the console
+				console.log('Name:', name);
+				console.log('Email:', email);
+				console.log('Message:', message);
+
+				// Optionally, you can show a success message or reset the form
+				// For example, display a success message
+				// alert('Message sent successfully!');
+
+				// Reset the form after submission
+				contactForm.reset();
+			}
+
+			// Add a 'submit' event listener to the form element
+			contactForm.addEventListener('submit', handleSubmit);
+		</script>
+	</body>
+
 </html>

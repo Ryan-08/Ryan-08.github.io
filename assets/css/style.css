@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #280536;
+  --secondary-color: #7a316f;
+  --light-color: #cd6688;
+  --contrast-color: #aed8cc;
+  --color: #906d9c;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* .Lora {
+  font-family: "Lora", serif;
+} */
+
+img.bg {
+  filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%) hue-rotate(250deg)
+    saturate(1000%) opacity(26%) contrast(371%) invert(1%);
+  -webkit-filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%)
+    hue-rotate(250deg) saturate(1000%) opacity(26%) contrast(371%) invert(1%);
+  -moz-filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%)
+    hue-rotate(250deg) saturate(1000%) opacity(26%) contrast(371%) invert(1%);
+}
+.shadow {
+  box-shadow: 1px 1px 12px 2px #16021fc9;
+  -webkit-box-shadow: 1px 1px 12px 2px #16021fc9;
+  -moz-box-shadow: 1px 1px 12px 2px #16021fc9;
+}
