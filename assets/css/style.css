@@ -3,7 +3,7 @@
   --secondary-color: #7a316f;
   --light-color: #cd6688;
   --contrast-color: #aed8cc;
-  --color: #906d9c;
+  --color: #b4b4b4;
 }
 
 body {
@@ -14,16 +14,83 @@ body {
   font-family: "Lora", serif;
 } */
 
+.list-skill > .tooltip > img {
+  filter: grayscale(60%);
+}
+
 img.bg {
-  filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%) hue-rotate(250deg)
+  filter: grayscale(86%) sepia(38%) blur(1px) brightness(56%) hue-rotate(250deg)
     saturate(1000%) opacity(26%) contrast(371%) invert(1%);
-  -webkit-filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%)
+  -webkit-filter: grayscale(86%) sepia(38%) blur(1px) brightness(56%)
     hue-rotate(250deg) saturate(1000%) opacity(26%) contrast(371%) invert(1%);
-  -moz-filter: grayscale(86%) sepia(38%) blur(3px) brightness(56%)
+  -moz-filter: grayscale(86%) sepia(38%) blur(1px) brightness(56%)
     hue-rotate(250deg) saturate(1000%) opacity(26%) contrast(371%) invert(1%);
 }
 .shadow {
   box-shadow: 1px 1px 12px 2px #16021fc9;
   -webkit-box-shadow: 1px 1px 12px 2px #16021fc9;
   -moz-box-shadow: 1px 1px 12px 2px #16021fc9;
+}
+
+.btn:hover,
+.icons:hover {
+  box-shadow: 1px 5px 29px -2px rgba(87, 23, 155, 1);
+  -webkit-box-shadow: 1px 5px 29px -2px rgba(87, 23, 155, 1);
+  -moz-box-shadow: 1px 5px 29px -2px rgba(87, 23, 155, 1);
+}
+
+/* hide the dropmenu by default */
+#dropmenu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+/* Add the 'active' class to show the dropmenu with animation */
+#dropmenu.active {
+  max-height: 500px; /* Set a suitable value for the maximum height */
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+  /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 0.89rem;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
