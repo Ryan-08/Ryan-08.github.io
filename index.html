@@ -11,67 +11,61 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@100;300;400;500;700&display=swap"
 			rel="stylesheet">
-		<!-- Tailwind CSS -->
 
+		<!-- Tailwind CSS -->
 		<link rel="stylesheet" href="assets/css/style.css">
-		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="assets/css/dist/output.css">
+		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
 
 		<title>Ade Ryan's Profile</title>
 	</head>
 
-	<body class="bg-[--primary-color]">
-		<nav class="navigation shadow z-[10] bg-[--primary-color] sticky top-0 left-0 right-0 flex justify-between p-4">
-			<a href="#" class="logo w-[100px] flex items-center">
-				<img src="./assets/images/coderyan.svg" width="100" height="auto" alt="Logo Code Ryan"
-					class="object-contain">
+	<body class="body">
+		<nav class="navigation">
+			<a href="#" class="logo">
+				<img src="./assets/images/coderyan.svg" width="100" height="auto" alt="Logo Code Ryan" class="contain">
 			</a>
-			<button id="btn-bar" class="sm:hidden">
-				<img src="./assets/images/bar.svg" width="32" height="auto" alt="menu" class="w-[32px]">
+			<button id="btn btn-bar" class="btn btn-bar">
+				<img src="./assets/images/bar.svg" width="32" height="auto" alt="menu" class="icon">
 			</button>
-			<div class="gap-4 hidden sm:flex text-white">
-				<a class="links hover:bg-[--secondary-color] p-2 rounded-xl" href="#about">About</a>
-				<a class="links hover:bg-[--secondary-color] p-2 rounded-xl" href="#projects">Projects</a>
-				<a class="links hover:bg-[--secondary-color] p-2 rounded-xl" href="#contact">Contact</a>
+			<div class="dropdown">
+				<a class="project-links" href="#about">About</a>
+				<a class="project-links" href="#projects">Projects</a>
+				<a class="project-links" href="#contact">Contact</a>
 			</div>
 		</nav>
-		<div id="dropmenu"
-			class="dropmenu z-[10] shadow sm:hidden bg-[--primary-color] flex flex-col sticky top-16 right-0 left-0">
-			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
-				href="#about">About</a>
-			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
-				href="#projects">Projects</a>
-			<a class="hover:bg-[#906d9c] text-[#aed8cc] p-4 flex justify-center text-[24px] font-bold"
-				href="#contact">Contact</a>
+		<div id="dropmenu" class="dropmenu">
+			<a class="drop-link" href="#about">About</a>
+			<a class="drop-link" href="#projects">Projects</a>
+			<a class="drop-link" href="#contact">Contact</a>
 		</div>
-		<div class="hero flex flex-col-reverse h-[100vh] sm:flex-row p-4">
-			<div class="flex flex-col basis-full justify-center mb-16 sm:mb-0 sm:pl-8">
-				<h1 class="greet text-[#fff] text-[40px]">Hello World!</h1>
-				<h2 class="name text-[32px] text-[#fff]">My name is <span class="text-[--light-color]"> Ade
+		<div class="hero">
+			<div class="section">
+				<h1 class="greet">Hello World!</h1>
+				<h2 class="name">My name is <span class="light"> Ade
 						Ryan </span></h2>
-				<h3 class="info text-[28px] text-[--contrast-color] underline underline-offset-4">I am a Full-Stack Web
+				<h3 class="info">I am a Full-Stack Web
 					Developer</h3>
-				<div class="btn-wrapper mt-4 flex gap-4">
-					<a href="https://linkedin.com/in/readeryan"
-						class="btn bg-[--light-color] border-2 border-[--light-color] p-2 px-4 rounded-md font-medium ">LinkedIn</a>
-					<a href="#contact"
-						class="btn border-2 border-[--light-color] p-2 px-4 rounded-md font-medium text-[--light-color]">Contact
+				<div class="btn-wrapper">
+					<a href="https://linkedin.com/in/readeryan" class="btn btn btn btn-primary">LinkedIn</a>
+					<a href="#contact" class="btn btn-secondary">Contact
 						Me</a>
 				</div>
 			</div>
-			<div class="flex basis-full mb-12 sm:mb-0">
-				<img src="./assets/images/bg.jpg" alt="bg" width="100%" height="auto" class="bg pointer-events-none">
+			<div class="img-wrapper">
+				<img src="./assets/images/bg.jpg" alt="bg" width="100%" height="auto" class="bg-image bg">
 			</div>
 		</div>
-		<div id="about" class="about flex min-h-[100vh] flex-col p-4">
-			<h1 class="heading text-[32px] text-white font-bold mt-[40px] mb-4">About Me</h1>
-			<div class="content flex flex-col sm:flex-row gap-4">
-				<div class="flex basis-1/2 mb-0">
+		<div id="about" class="about">
+			<h1 class="heading">About Me</h1>
+			<div class="content">
+				<div class="img-wrapper">
 					<img src="./assets/images/bg2.jpg" width="100%" height="100%" alt="bg"
 						class="bg pointer-events-none">
 				</div>
-				<div class="wrapper flex basis-1/2 flex-col gap-4">
-					<p class="text-[--color]">Meet a passionate Full-Stack Web Developer with expertise
+				<div class="wrapper">
+					<p class="p-text">Meet a passionate Full-Stack Web Developer with expertise
 						in
 						both
 						front-end and
@@ -84,8 +78,8 @@
 						Let's
 						build something
 						extraordinary together.</p>
-					<h2 class="text-white text-[32px]">Skills</h2>
-					<div class="list-skill grid grid-cols-7 gap-2">
+					<h2 class="heading-2">Skills</h2>
+					<div class="list-skill">
 						<!-- PLAIN -->
 						<div class="tooltip">
 							<img width="100%" height="100%" alt="skills-icon"
@@ -177,231 +171,194 @@
 				</div>
 			</div>
 		</div>
-		<div id="projects" class="projects min-h-[100vh] p-4">
-			<h1 class="heading text-[32px] text-white font-bold mt-[40px] mb-4">Projects</h1>
+		<div id="projects" class="projects">
+			<h1 class="heading">Projects</h1>
 
-			<ul class="list-projects grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+			<ul class="list-projects">
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/project1.PNG" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/next-chatapp-frontend">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/project1.PNG"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/next-chatapp-frontend">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/next-chatapp-frontend"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">ChatApp</a>
-					<p class="text-[--color] cursor-default">Simple chat application created using next js framework and
+					<a href="https://github.com/Ryan-08/next-chatapp-frontend" class="project_title">ChatApp</a>
+					<p class="project-desc">Simple chat application created using next js framework and
 						api using node express and mongodb, implementing authentication and authorization functionality
 						with chat using socket.io</p>
 
-					<small class="text-[--color] cursor-default">(MongoDB, Express, Next.js, Node.js)</small>
+					<small class="project-desc">(MongoDB, Express, Next.js, Node.js)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/project2.PNG" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/cars-show">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://cars-show-sable.vercel.app/">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/project2.PNG"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/cars-show">Github</a>
+							<a class="special-links" href="https://cars-show-sable.vercel.app/">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/cars-show"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Cars
+					<a href="https://github.com/Ryan-08/cars-show" class="project_title">Cars
 						Showcase</a>
-					<p class="text-[--color] cursor-default">Build using next js 13 and implementing api integration
+					<p class="project-desc">Build using next js 13 and implementing api integration
 						with cars-api</p>
 
-					<small class="text-[--color] cursor-default">(Next js)</small>
+					<small class="project-desc">(Next js)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/project3.PNG" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/image-editor-web">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://ryan-08.github.io/image-editor-web/">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/project3.PNG"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/image-editor-web">Github</a>
+							<a class="special-links" href="https://ryan-08.github.io/image-editor-web/">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/image-editor-web"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Image
+					<a href="https://github.com/Ryan-08/image-editor-web" class="project_title">Image
 						Editor</a>
-					<p class="text-[--color] cursor-default">Web editing image (simple edit only) like set brightness or
+					<p class="project-desc">Web editing image (simple edit only) like set brightness or
 						invert image color</p>
 
-					<small class="text-[--color] cursor-default">(HTML CSS JS)</small>
+					<small class="project-desc">(HTML CSS JS)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/project4.PNG" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/E-Ticketing">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/project4.PNG"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/E-Ticketing">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/E-Ticketing"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">E-Ticketing</a>
-					<p class="text-[--color] cursor-default">Web application for reporting problem build using
+					<a href="https://github.com/Ryan-08/E-Ticketing" class="project_title">E-Ticketing</a>
+					<p class="project-desc">Web application for reporting problem build using
 						Laravel(php) and integration chat using Node express socket.io, this project build for Dinas
 						Kominfotik Banda Aceh</p>
 
-					<small class="text-[--color] cursor-default">(Laravel Node.js Express Socket.io)</small>
+					<small class="project-desc">(Laravel Node.js Express Socket.io)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/bg.jpg" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/Web-Hibamas">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/Web-Hibamas">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/Web-Hibamas"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Hibamas</a>
-					<p class="text-[--color] cursor-default">Web project created using Django framework</p>
+					<a href="https://github.com/Ryan-08/Web-Hibamas" class="project_title">Hibamas</a>
+					<p class="project-desc">Web project created using Django framework</p>
 
-					<small class="text-[--color] cursor-default">(Django python)</small>
+					<small class="project-desc">(Django python)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/bg.jpg" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/admin-hiacego">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/admin-hiacego">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/admin-hiacego"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Hiace-Go |
+					<a href="https://github.com/Ryan-08/admin-hiacego" class="project_title">Hiace-Go |
 						Admin</a>
-					<p class="text-[--color] cursor-default">Web admin for Hiace-Go application. Used for dashboard
+					<p class="project-desc">Web admin for Hiace-Go application. Used for dashboard
 						application and maintenance di app</p>
 
-					<small class="text-[--color] cursor-default">(Next.js Firebase tailwindcss)</small>
+					<small class="project-desc">(Next.js Firebase tailwindcss)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/bg.jpg" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/hiacego">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/hiacego">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/hiacego"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Hiace-Go |
+					<a href="https://github.com/Ryan-08/hiacego" class="project_title">Hiace-Go |
 						Mobile App</a>
-					<p class="text-[--color] cursor-default">Hiace-Go is a mobile application designed to facilitate
+					<p class="project-desc">Hiace-Go is a mobile application designed to facilitate
 						users in booking Hiace vehicles. Hiace vehicles are a type of
 						van commonly used for inter-city or intra-city transportation with larger passenger capacity.
 					</p>
 
-					<small class="text-[--color] cursor-default">(Kotlin Firebase)</small>
+					<small class="project-desc">(Kotlin Firebase)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/bg.jpg" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/desinthazhr/TickeTrip">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/bg.jpg"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/desinthazhr/TickeTrip">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/desinthazhr/TickeTrip"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">TickeTrip |
+					<a href="https://github.com/desinthazhr/TickeTrip" class="project_title">TickeTrip |
 						Mobile App</a>
-					<p class="text-[--color] cursor-default">TickeTrip is a simple application designed for easy and
+					<p class="project-desc">TickeTrip is a simple application designed for easy and
 						fast booking of train tickets and hotels. The purpose of the
 						TickeTrip app is to make it easier for passengers to book train tickets and hotels when
 						traveling outside their region.
 						Users can also choose their preferred hotel and specify the number of days they want to stay
 					</p>
 
-					<small class="text-[--color] cursor-default">(Android Java)</small>
+					<small class="project-desc">(Android Java)</small>
 				</li>
 				<!-- Project  -->
-				<li class="project flex flex-col gap-4 p-4">
-					<div class="group thumbnail relative rounded-md duration-100 cursor-pointer sm:max-w-[300px]"
-						data-link="#id">
-						<img width="100%" height="100%" class="rounded-md group-hover:opacity-25 duration-100 "
-							src="./assets/images/project6.PNG" alt="project thumbnail">
-						<div class="links hidden group-hover:flex absolute mb-8 bottom-0 left-0 right-0 justify-evenly">
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="https://github.com/Ryan-08/journalize">Github</a>
-							<a class="text-[--contrast-color] w-[120px] text-center font-medium p-2 rounded-lg bg-[--secondary-color] hover:bg-[--light-color] hover:text-[--primary-color] duration-300"
-								href="#liveDemo">Live Demo</a>
+				<li class="project">
+					<div class="thumbnail" data-link="#id">
+						<img width="100%" height="100%" class="thumbnail-pic " src="./assets/images/project6.PNG"
+							alt="project thumbnail">
+						<div class="project-links">
+							<a class="special-links" href="https://github.com/Ryan-08/journalize">Github</a>
+							<a class="special-links" href="#liveDemo">Live Demo</a>
 						</div>
 					</div>
-					<a href="https://github.com/Ryan-08/journalize"
-						class="w-fit project_title text-white text-[24px] hover:text-[--contrast-color]">Jurnal
+					<a href="https://github.com/Ryan-08/journalize" class="project_title">Jurnal
 						Dosen</a>
-					<p class="text-[--color] cursor-default">An application for academic journals and research for
+					<p class="project-desc">An application for academic journals and research for
 						professors, the application uses data connected from Google
 						Scholar. The application is used to add research or journals that researchers want to publish.
 					</p>
 
-					<small class="text-[--color] cursor-default">(Laravel MongoDB)</small>
+					<small class="project-desc">(Laravel MongoDB)</small>
 				</li>
 				<!-- End of Projects-->
 			</ul>
-			<h4 class="text-center text-white font-semibold">More projects added soon...</h4>
+			<h4 class="more">More projects added soon...</h4>
 		</div>
-		<div id="contact" class="contact p-4">
+		<div id="contact" class="contact">
 
-			<h1 id="ContactMe" class="text-3xl text-white font-bold mt-[40px] mb-4">
-				<span class="text-yellow-500">&#9742;</span>
+			<h1 id="ContactMe" class="heading-contact">
+				<span class="text-yellow">&#9742;</span>
 				&nbsp; Contact Me
 			</h1>
-			<div class="flex flex-col sm:flex-row items-center gap-4">
-				<p class="text-white">You can reach out to me through the following social media channels:</p>
-				<div class="flex justify-center w-fit bg-[--light-color] rounded-md">
-					<a target="_blank" href="https://github.com/Ryan-08" class="icons p-2 w-[45px] rounded-xl">
+			<div class="contact-section">
+				<p class="text-w">You can reach out to me through the following social media channels:</p>
+				<div class="list-contact">
+					<a target="_blank" href="https://github.com/Ryan-08" class="contact-icons icons">
 						<img width="100%" height="100%"
 							src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
 					</a>
-					<a target="_blank" href="https://linkedin.com/in/readeryan" class="icons p-2 w-[45px] rounded-xl">
+					<a target="_blank" href="https://linkedin.com/in/readeryan" class="contact-icons icons">
 						<img width="100%" height="100%"
 							src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" />
 					</a>
-					<a target="_blank" href="mailto:ad21.ryn@gmail.com" class="icons p-2 w-[45px] rounded-xl">
+					<a target="_blank" href="mailto:ad21.ryn@gmail.com" class="contact-icons icons">
 						<img src="./assets/images/gmail-logo.png" width="100%" height="100%" alt="gmail">
 					</a>
-					<a target="_blank" href="https://www.instagram.com/aderyan.m/"
-						class="icons p-2 w-[45px] rounded-xl">
+					<a target="_blank" href="https://www.instagram.com/aderyan.m/" class="contact-icons icons">
 						<img src="./assets/images/instagram.png" width="100%" height="100%" alt="instagram">
 					</a>
 				</div>
@@ -409,14 +366,14 @@
 
 
 		</div>
-		<footer class="footer p-4 bg-black">
-			<a class="text-[--color] text-sm" href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail
+		<footer class="footer">
+			<a class="licensed" href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail
 				&
 				Instagram
 				icons -
 				Flaticon</a>
 			<br />
-			<p class="text-[--color] text-center">
+			<p class="cp">
 				&copy;Copryright 2023 Code Ryan
 			</p>
 		</footer>
